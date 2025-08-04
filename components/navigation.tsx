@@ -30,7 +30,7 @@ export function Navigation() {
     // Create a temporary link to download the resume
     const link = document.createElement("a")
     link.href = "/resume.pdf" // You'll need to add your actual resume file to the public folder
-    link.download = "John_Doe_Resume.pdf"
+    link.download = "Fullstack_Developer_resume_of_Tanvir.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -47,7 +47,7 @@ export function Navigation() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-2xl font-bold text-gradient">
-            JD
+            Tanvir
           </motion.div>
 
           {/* Desktop Navigation */}
