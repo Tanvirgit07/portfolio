@@ -13,7 +13,7 @@ export function ResumeSection() {
     // Create a temporary link to download the resume
     const link = document.createElement("a")
     link.href = "/resume.pdf" // You'll need to add your actual resume file to the public folder
-    link.download = "John_Doe_Resume.pdf"
+    link.download = "Fullstack_Developer_resume_of_Tanvir.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -33,7 +33,7 @@ export function ResumeSection() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "John Doe - Resume",
+          title: "Fullstack_Developer_resume_of_Tanvir.pdf",
           text: "Check out John Doe's resume - Full Stack Developer",
           url: window.location.origin + "/resume.pdf",
         })

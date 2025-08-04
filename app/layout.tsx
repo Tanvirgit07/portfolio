@@ -7,17 +7,17 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "John Doe - Full Stack Developer",
+  title: "Tanvir Ahmmed - Full Stack Developer",
   description:
     "Modern portfolio showcasing innovative web development projects and expertise in React, Next.js, and modern technologies.",
   keywords: ["developer", "portfolio", "react", "nextjs", "web development", "full stack"],
-  authors: [{ name: "John Doe" }],
-  creator: "John Doe",
+  authors: [{ name: "Tanvir Ahmmed" }],
+  creator: "Tanvir",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://johndoe.dev",
-    title: "John Doe - Full Stack Developer",
+    // url: "https://johndoe.dev",
+    title: "Tanvir Ahmmed - Full Stack Developer",
     description: "Modern portfolio showcasing innovative web development projects and expertise.",
     siteName: "John Doe Portfolio",
   },
