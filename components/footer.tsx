@@ -9,17 +9,17 @@ export function Footer() {
   const socialLinks = [
     {
       name: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/Tanvirgit07",
       icon: Github,
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/ahmmed-tanvir/",
       icon: Linkedin,
     },
     {
       name: "Email",
-      href: "mailto:john@example.com",
+      href: "mailto:ahmmedtanvir9090@gmail.com",
       icon: Mail,
     },
   ]
@@ -35,7 +35,7 @@ export function Footer() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-gradient">John Doe</h3>
+            <h3 className="text-2xl font-bold text-gradient">Tanvir Ahmmed</h3>
             <p className="text-muted-foreground mt-2">Full Stack Developer</p>
           </motion.div>
 
@@ -79,7 +79,7 @@ export function Footer() {
               >
                 <Heart className="w-4 h-4 text-red-500 fill-current" />
               </motion.span>{" "}
-              by John Doe
+              by Tanvir Ahmmed
             </p>
           </motion.div>
         </div>

@@ -11,12 +11,12 @@ export function AboutSection() {
     "Next.js",
     "TypeScript",
     "Node.js",
-    "Python",
-    "PostgreSQL",
+    "JavaScript",
+    "HTML/CSS",
     "MongoDB",
-    "AWS",
-    "Docker",
-    "GraphQL",
+    "C",
+    "C++",
+    "Firebase",
     "Tailwind CSS",
     "Framer Motion",
   ]
@@ -109,7 +109,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="text-xl text-muted-foreground max-w-3xl mx-auto"
           >
-            Passionate developer with 5+ years of experience creating innovative solutions
+            Passionate developer with 2+ years of experience creating innovative solutions
           </motion.p>
         </motion.div>
 
@@ -141,7 +141,7 @@ export function AboutSection() {
                     transition={{ duration: 2, ease: "linear" }}
                   />
                   <Image
-                    src="/placeholder.svg?height=300&width=300"
+                    src="/profileImage.jpeg"
                     alt="John Doe"
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
@@ -155,7 +155,7 @@ export function AboutSection() {
                   viewport={{ once: true }}
                   className="text-2xl font-bold mb-4 text-center"
                 >
-                  John Doe
+                  Tanvir Ahmmed
                 </motion.h3>
 
                 <motion.p
@@ -166,7 +166,7 @@ export function AboutSection() {
                   transition={{ delay: 0.2 }}
                   className="text-muted-foreground text-center mb-6"
                 >
-                  Full Stack Developer based in San Francisco
+                  Full Stack Developer based in Bangladesh,Dhaka
                 </motion.p>
               </CardContent>
             </Card>
@@ -182,7 +182,7 @@ export function AboutSection() {
             <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <motion.p variants={itemVariants} className="text-lg leading-relaxed">
                 I'm a passionate full-stack developer with a love for creating beautiful, functional applications. My
-                journey in tech started 5 years ago, and I've been constantly learning and evolving ever since.
+                journey in tech started 2 years ago, and I've been constantly learning and evolving ever since.
               </motion.p>
 
               <motion.p variants={itemVariants} className="text-lg leading-relaxed">

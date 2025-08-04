@@ -1,50 +1,38 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, MapPin } from "lucide-react"
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, MapPin } from "lucide-react";
 
 export function ExperienceSection() {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Inc.",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
+      title: "Junior Frontend Developer",
+      company: "Bd Calling IT Limited",
+      location: "Dhaka, Bangladesh",
+      period: "2025 - Present",
       description:
-        "Led development of scalable web applications serving 100K+ users. Mentored junior developers and implemented CI/CD pipelines.",
-      technologies: ["React", "Node.js", "AWS", "Docker"],
+        "Collaborated in the development of responsive and scalable web applications. Focused on UI implementation, reusable component design, and integrating APIs.",
+      technologies: [
+        "React.js",
+        "Tailwind CSS",
+        "JavaScript",
+        "REST API",
+        "Git",
+      ],
     },
-    {
-      title: "Full Stack Developer",
-      company: "StartupXYZ",
-      location: "Remote",
-      period: "2020 - 2022",
-      description:
-        "Built MVP from scratch and scaled to 10K users. Implemented real-time features and optimized database performance.",
-      technologies: ["Vue.js", "Python", "PostgreSQL", "Redis"],
-    },
-    {
-      title: "Frontend Developer",
-      company: "WebAgency",
-      location: "New York, NY",
-      period: "2019 - 2020",
-      description:
-        "Developed responsive websites and web applications for various clients. Collaborated with designers to implement pixel-perfect UIs.",
-      technologies: ["JavaScript", "React", "Sass", "Webpack"],
-    },
-  ]
+  ];
 
   const education = [
     {
       degree: "Bachelor of Science in Computer Science",
       school: "University of California, Berkeley",
-      period: "2015 - 2019",
+      period: "2021 - 2026",
       description:
-        "Graduated Magna Cum Laude. Relevant coursework: Data Structures, Algorithms, Database Systems, Software Engineering.",
+        "Graduated with a CGPA of 3.75 from Daffodil International University. Relevant coursework included Web Development, Data Structures, Algorithms, Database Management Systems, and Software Engineering.",
     },
-  ]
+  ];
 
   return (
     <section id="experience" className="py-20 bg-background">
@@ -56,7 +44,9 @@ export function ExperienceSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Experience & Education</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+            Experience & Education
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             My professional journey and educational background
           </p>
@@ -93,10 +83,16 @@ export function ExperienceSection() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground mb-4">{exp.description}</p>
+                      <p className="text-muted-foreground mb-4">
+                        {exp.description}
+                      </p>
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech) => (
-                          <Badge key={tech} variant="secondary" className="text-xs">
+                          <Badge
+                            key={tech}
+                            variant="secondary"
+                            className="text-xs"
+                          >
                             {tech}
                           </Badge>
                         ))}
@@ -142,5 +138,5 @@ export function ExperienceSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -51,7 +51,7 @@ export function HeroSection() {
                 transition: { duration: 0.3 },
               }}
             >
-              John Doe
+              Tanvir 
             </motion.span>
           </motion.h1>
 
@@ -61,7 +61,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl mb-8 text-gray-200"
           >
-            Full Stack Developer & UI/UX Enthusiast
+            Full Stack Web Developer | Focused on Clean Code & Functionality
           </motion.p>
 
           <motion.p
@@ -103,14 +103,15 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 1 }}
             className="flex justify-center space-x-6 mb-12"
           >
-            <a href="https://github.com" className="text-white hover:text-blue-400 transition-colors cursor-pointer">
+            <a href="https://github.com/Tanvirgit07" target="_blank" className="text-white hover:text-blue-400 transition-colors cursor-pointer">
               <Github className="w-6 h-6" />
             </a>
-            <a href="https://linkedin.com" className="text-white hover:text-blue-400 transition-colors cursor-pointer">
+            <a href="https://www.linkedin.com/in/ahmmed-tanvir/" target="_blank" className="text-white hover:text-blue-400 transition-colors cursor-pointer">
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:john@example.com"
+              href="mailto:ahmmedtanvir9090@gmail.com"
+              target="_blank"
               className="text-white hover:text-blue-400 transition-colors cursor-pointer"
             >
               <Mail className="w-6 h-6" />
