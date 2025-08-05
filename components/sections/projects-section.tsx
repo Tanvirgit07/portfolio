@@ -13,10 +13,11 @@ export function ProjectsSection() {
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and order processing.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/jassica.png",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      liveUrl: "https://jessicarosen-frontend.vercel.app/",
+      clientUrl: "https://github.com/Tanvirgit07/jessica_website",
+      adminUrl: "https://github.com/Tanvirgit07/jessica_dashboard.git"
     },
     {
       title: "Task Management App",
@@ -25,7 +26,7 @@ export function ProjectsSection() {
       image: "/placeholder.svg?height=300&width=500",
       technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      clientUrl: "https://github.com",
     },
     {
       title: "Weather Dashboard",
@@ -34,7 +35,7 @@ export function ProjectsSection() {
       image: "/placeholder.svg?height=300&width=500",
       technologies: ["Vue.js", "Python", "FastAPI", "Chart.js"],
       liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      clientUrl: "https://github.com",
     },
   ]
 
@@ -135,9 +136,21 @@ export function ProjectsSection() {
                       className="cursor-pointer bg-transparent group-hover:border-blue-500/50 transition-colors duration-300"
                       asChild
                     >
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <a href={project.clientUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-2" />
-                        Code
+                        Client
+                      </a>
+                    </Button>
+                    
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="cursor-pointer bg-transparent group-hover:border-blue-500/50 transition-colors duration-300"
+                      asChild
+                    >
+                      <a href={project.adminUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        Admin
                       </a>
                     </Button>
                   </motion.div>

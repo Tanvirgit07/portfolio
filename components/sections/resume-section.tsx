@@ -51,8 +51,8 @@ export function ResumeSection() {
   }
 
   const resumeStats = [
-    { label: "Years of Experience", value: "5+" },
-    { label: "Projects Completed", value: "50+" },
+    { label: "Years of Experience", value: "2+" },
+    { label: "Projects Completed", value: "10+" },
     { label: "Technologies Mastered", value: "20+" },
     { label: "Client Satisfaction", value: "100%" },
   ]
