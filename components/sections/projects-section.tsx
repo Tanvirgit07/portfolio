@@ -1,43 +1,69 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github } from "lucide-react"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 export function ProjectsSection() {
   const projects = [
+    {
+      title: "Tomato E-commerce",
+      description:
+        "Tomato E-commerce is a full-featured online shopping platform that allows users to browse products, add items to their cart, and complete secure purchases. The platform supports user authentication, order management, product search and filtering, and an admin dashboard to manage inventory and track orders.",
+      image: "/tomato.png",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Stripe",
+      ],
+      liveUrl: "https://tomato-ecommerce-demo.com", // Replace with actual deployed link
+      clientUrl: "https://github.com/Tanvirgit07/Tomato_front_end.git", // Replace with actual repo link
+       adminUrl: "https://github.com/Tanvirgit07/Tomato_dashboard.git",
+    },
     {
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and order processing.",
       image: "/jassica.png",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://jessicarosen-frontend.vercel.app/",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Stripe",
+      ],
+      liveUrl: "https://lawbie.com/",
       clientUrl: "https://github.com/Tanvirgit07/jessica_website",
-      adminUrl: "https://github.com/Tanvirgit07/jessica_dashboard.git"
+      adminUrl: "https://github.com/Tanvirgit07/jessica_dashboard.git",
     },
     {
-      title: "Task Management App",
+      title: "Lone Management Website",
       description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io"],
-      liveUrl: "https://example.com",
-      clientUrl: "https://github.com",
+        "Lone Management Website is a web-based platform designed to help small teams and freelancers manage tasks efficiently. It includes features like project creation, task assignment, real-time status updates, drag-and-drop task boards, and collaboration tools to improve team productivity and organization.",
+      image: "/rambap.png",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Stripe",
+      ],
+      liveUrl: "https://guehiandco.com/", // Replace with actual deployed URL
+      adminUrl: "https://github.com/Tanvirgit07/lone-service-dashboard.git",
+      clientUrl: "https://github.com/Tanvirgit07/lone-service-website.git", // Replace with actual repo
     },
-    {
-      title: "Weather Dashboard",
-      description:
-        "A beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Vue.js", "Python", "FastAPI", "Chart.js"],
-      liveUrl: "https://example.com",
-      clientUrl: "https://github.com",
-    },
-  ]
+  ];
 
   return (
     <section id="projects" className="py-20 bg-muted/50">
@@ -49,7 +75,9 @@ export function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Featured Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+            Featured Projects
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A showcase of my recent work and personal projects
           </p>
@@ -76,7 +104,10 @@ export function ProjectsSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <CardHeader className="p-0">
                   <div className="relative overflow-hidden rounded-t-lg">
-                    <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.4, ease: "easeOut" }}>
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                    >
                       <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
@@ -92,7 +123,9 @@ export function ProjectsSection() {
                   <CardTitle className="mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {project.title}
                   </CardTitle>
-                  <p className="text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
+                  <p className="text-muted-foreground mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
@@ -100,7 +133,10 @@ export function ProjectsSection() {
                         key={tech}
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: index * 0.2 + techIndex * 0.1 }}
+                        transition={{
+                          duration: 0.3,
+                          delay: index * 0.2 + techIndex * 0.1,
+                        }}
                         viewport={{ once: true }}
                       >
                         <Badge
@@ -125,7 +161,11 @@ export function ProjectsSection() {
                       className="cursor-pointer group-hover:bg-blue-600 transition-colors duration-300"
                       asChild
                     >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Live Demo
                       </a>
@@ -136,19 +176,27 @@ export function ProjectsSection() {
                       className="cursor-pointer bg-transparent group-hover:border-blue-500/50 transition-colors duration-300"
                       asChild
                     >
-                      <a href={project.clientUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.clientUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github className="w-4 h-4 mr-2" />
                         Client
                       </a>
                     </Button>
-                    
+
                     <Button
                       size="sm"
                       variant="outline"
                       className="cursor-pointer bg-transparent group-hover:border-blue-500/50 transition-colors duration-300"
                       asChild
                     >
-                      <a href={project.adminUrl} target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={project.adminUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github className="w-4 h-4 mr-2" />
                         Admin
                       </a>
@@ -161,5 +209,5 @@ export function ProjectsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

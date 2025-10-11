@@ -9,7 +9,7 @@ export function ExperienceSection() {
   const experiences = [
     {
       title: "Junior Frontend Developer",
-      company: "Bd Calling IT Limited",
+      company: "Betopia Group",
       location: "Dhaka, Bangladesh",
       period: "2025 - Present",
       description:
