@@ -10,6 +10,26 @@ import Image from "next/image";
 export function ProjectsSection() {
   const projects = [
     {
+      title: "QuickChat",
+      description:
+        "QuickChat is a modern real-time messaging application that enables users to connect instantly with friends and colleagues. The platform features user authentication, private one-on-one chats, real-time online/offline status indicators, image sharing, message seen status, voice and video calling powered by WebRTC, and a fully responsive design for mobile and desktop devices.",
+      image: "/Screenshot.png",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "Socket.io",
+        "WebRTC",
+        "MongoDB",
+        "NextAuth.js",
+        "Tanstack Query",
+      ],
+      liveUrl: "https://your-quickchat-live-demo.com",
+      clientUrl: "https://github.com/yourusername/quickchat-client.git",
+      serverUrl: "https://github.com/yourusername/quickchat-server.git",
+    },
+    {
       title: "Tomato E-commerce",
       description:
         "Tomato E-commerce is a full-featured online shopping platform that allows users to browse products, add items to their cart, and complete secure purchases. The platform supports user authentication, order management, product search and filtering, and an admin dashboard to manage inventory and track orders.",
@@ -23,9 +43,9 @@ export function ProjectsSection() {
         "Tailwind CSS",
         "Stripe",
       ],
-      liveUrl: "https://tomato-ecommerce-demo.com", // Replace with actual deployed link
-      clientUrl: "https://github.com/Tanvirgit07/Tomato_front_end.git", // Replace with actual repo link
-       adminUrl: "https://github.com/Tanvirgit07/Tomato_dashboard.git",
+      liveUrl: "https://tomato-ecommerce-demo.com",
+      clientUrl: "https://github.com/Tanvirgit07/Tomato_front_end.git",
+      adminUrl: "https://github.com/Tanvirgit07/Tomato_dashboard.git",
     },
     {
       title: "E-Commerce Platform",
@@ -59,31 +79,33 @@ export function ProjectsSection() {
         "Tailwind CSS",
         "Stripe",
       ],
-      liveUrl: "https://guehiandco.com/", // Replace with actual deployed URL
+      liveUrl: "https://guehiandco.com/",
+      clientUrl: "https://github.com/Tanvirgit07/lone-service-website.git",
       adminUrl: "https://github.com/Tanvirgit07/lone-service-dashboard.git",
-      clientUrl: "https://github.com/Tanvirgit07/lone-service-website.git", // Replace with actual repo
     },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-muted/50">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-16 sm:py-20 bg-muted/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gradient">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             A showcase of my recent work and personal projects
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -102,6 +124,7 @@ export function ProjectsSection() {
             >
               <Card className="h-full hover:shadow-2xl transition-all duration-500 group relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
                 <CardHeader className="p-0">
                   <div className="relative overflow-hidden rounded-t-lg">
                     <motion.div
@@ -109,24 +132,27 @@ export function ProjectsSection() {
                       transition={{ duration: 0.4, ease: "easeOut" }}
                     >
                       <Image
-                        src={project.image || "/placeholder.svg"}
+                        src={project.image}
                         alt={project.title}
                         width={500}
                         height={300}
-                        className="w-full h-48 object-cover"
+                        className="w-full h-44 sm:h-48 md:h-52 object-cover"
                       />
                     </motion.div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </CardHeader>
-                <CardContent className="p-6 relative z-10">
+
+                <CardContent className="p-4 sm:p-6 relative z-10">
                   <CardTitle className="mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {project.title}
                   </CardTitle>
-                  <p className="text-muted-foreground mb-4 line-clamp-3">
+
+                  <p className="text-muted-foreground mb-4 text-sm sm:text-base line-clamp-3">
                     {project.description}
                   </p>
 
+                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
                       <motion.div
@@ -149,8 +175,9 @@ export function ProjectsSection() {
                     ))}
                   </div>
 
+                  {/* Buttons */}
                   <motion.div
-                    className="flex gap-2"
+                    className="flex flex-wrap gap-2"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
@@ -158,7 +185,7 @@ export function ProjectsSection() {
                   >
                     <Button
                       size="sm"
-                      className="cursor-pointer group-hover:bg-blue-600 transition-colors duration-300"
+                      className="text-xs sm:text-sm cursor-pointer group-hover:bg-blue-600 transition-colors duration-300"
                       asChild
                     >
                       <a
@@ -170,10 +197,11 @@ export function ProjectsSection() {
                         Live Demo
                       </a>
                     </Button>
+
                     <Button
                       size="sm"
                       variant="outline"
-                      className="cursor-pointer bg-transparent group-hover:border-blue-500/50 transition-colors duration-300"
+                      className="text-xs sm:text-sm cursor-pointer bg-transparent group-hover:border-blue-500/50 transition-colors duration-300"
                       asChild
                     >
                       <a
@@ -189,7 +217,7 @@ export function ProjectsSection() {
                     <Button
                       size="sm"
                       variant="outline"
-                      className="cursor-pointer bg-transparent group-hover:border-blue-500/50 transition-colors duration-300"
+                      className="text-xs sm:text-sm cursor-pointer bg-transparent group-hover:border-blue-500/50 transition-colors duration-300"
                       asChild
                     >
                       <a
