@@ -25,6 +25,8 @@ export function ProjectsSection() {
         "NextAuth.js",
         "Tanstack Query",
       ],
+
+      
       liveUrl: "https://your-quickchat-live-demo.com",
       clientUrl: "https://github.com/yourusername/quickchat-client.git",
       serverUrl: "https://github.com/yourusername/quickchat-server.git",
